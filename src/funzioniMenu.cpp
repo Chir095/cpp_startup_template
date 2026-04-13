@@ -1,4 +1,5 @@
 #include "funzioniMenu.h"
+#include <cstdlib>
 
 //DEFINIZIONE COSTRUTTORE DI DEFAULT
 Menu::Menu()
@@ -77,17 +78,14 @@ void Menu::eseguiOperazione()
 			{
 				case 1:
 					   cout<<"SCELTO "<<opzioni[scelta-1]<<endl;
+					   s.setStudente();
 					   
-					   		   
 				break;
 				
 				case 2:
 					
 					   cout<<"SCELTO "<<opzioni[scelta-1]<<endl;
-					   
-				break;
-				
-				case 3:
+					   s.stampaStudente();
 					   cout<<"SCELTO "<<opzioni[scelta-1]<<endl;
 					
 				break;
