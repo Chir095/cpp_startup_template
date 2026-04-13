@@ -77,17 +77,18 @@ void Menu::eseguiOperazione()
 			switch(scelta)
 			{
 				case 1:
-					   cout<<"SCELTO "<<opzioni[scelta-1]<<endl;
-					   s.setStudente();
-					   
+						cout<<"SCELTO "<<opzioni[scelta-1]<<endl;
+						for(int i=0;i<10;i++){
+							s[i].setStudente();
+						}	   
 				break;
 				
 				case 2:
 					
 					   cout<<"SCELTO "<<opzioni[scelta-1]<<endl;
-					   s.stampaStudente();
-					   cout<<"SCELTO "<<opzioni[scelta-1]<<endl;
-					
+					   for(int i=0;i<10;i++){
+							s[i].stampaStudente();
+						}					
 				break;
 				
 				case 4:

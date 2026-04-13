@@ -180,7 +180,8 @@ char leggiChar(){
     char s;
     do{
         cout<<"INSERISCI SESSO: [1]M or [2]F";
-        cin>>scelta;
+        scelta = leggiUchar();
+        cin.ignore(numeric_limits<streamsize>::max(),'\n');
         
         switch(scelta){
             case 1:
