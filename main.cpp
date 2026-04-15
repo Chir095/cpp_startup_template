@@ -5,6 +5,9 @@ int main()
 	Menu m;
 	m.aggiungiVoce("INSERIMENTO");
 	m.aggiungiVoce("STAMPA");
+	m.aggiungiVoce("ORDINA ARRAY STUDENTE");
+	m.aggiungiVoce("RICERCA ARRAY STUDENTE");
+	m.aggiungiVoce("ELIMINA ARRAY STUDENTE");
 	m.aggiungiVoce("ESCI");
 	
 	do

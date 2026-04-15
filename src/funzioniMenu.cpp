@@ -91,38 +91,57 @@ void Menu::eseguiOperazione()
 						}					
 				break;
 				
-				case 4:
+				case 3:
+						cout<<"SCELTO "<<opzioni[scelta-1]<<endl;
+						//ORDINA ARRAY STUDENTE BUBBLE SORT
+						for(int i=0;i<10-1;i++){
+							for(int j=0;j<10-i-1;j++){
+								if(s[j].getMatricola()>s[j+1].getMatricola()){
+									Studente temp=s[j];
+									s[j]=s[j+1];
+									s[j+1]=temp;
+								}
+							}
+						}
+				break;
 				
+				case 4:
+						cout<<"SCELTO "<<opzioni[scelta-1]<<endl;
+						//RICERCA ARRAY STUDENTE RICERCA SEQUENZIALE
+						int matricolaDaCercare;
+						cout<<"INSERISCI LA MATRICOLA DA CERCARE: ";
+						cin>>matricolaDaCercare;
+						bool trovato=false;
+						for(int i=0;i<10;i++){
+							if(s[i].getMatricola()==matricolaDaCercare){
+								s[i].stampaStudente();
+								trovato=true;
+								break;
+							}
+						}
+						if(!trovato){
+							cout<<"STUDENTE NON TROVATO"<<endl;
+						}
 				break;
 				
 				case 5:
-				
 					
-				break;
-				
-				case 6:
-					
-					
-				break;
-				
-				case 7:
-				
-				
-				break;
-					
-				case 8:
-				
-				
-				break;
-				
-				case 9:
-					
-					
-				break;
-				
-				case 10:
-				
-				
+						cout<<"SCELTO "<<opzioni[scelta-1]<<endl;
+						//ELIMINA ARRAY STUDENTE
+						int matricolaDaEliminare;
+						cout<<"INSERISCI LA MATRICOLA DA ELIMINARE: ";
+						cin>>matricolaDaEliminare;
+						bool eliminato=false;
+						for(int i=0;i<10;i++){
+							if(s[i].getMatricola()==matricolaDaEliminare){
+								s[i].setMatricola(0);
+								eliminato=true;
+								break;
+							}
+						}
+						if(!eliminato){
+							cout<<"STUDENTE NON TROVATO"<<endl;
+						}
 				break;
 				
 				default:
